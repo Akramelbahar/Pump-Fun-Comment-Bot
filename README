@@ -1,0 +1,76 @@
+PumpFun AutoComment Bot
+Overview
+The PumpFun AutoComment Bot automates account creation, CAPTCHA solving, and comment submission on pump.fun. It supports proxy configuration, handles CAPTCHA challenges with Capsolver, and interacts with the platform's APIs seamlessly.
+
+Features
+Automated Account Creation: Temporary email creation for new accounts.
+CAPTCHA Handling: Solves AWS WAF CAPTCHA challenges using Capsolver.
+Proxy Support: Supports HTTP/HTTPS proxies for anonymity.
+Customizable Comments: Easily configure the comment text and delay between submissions.
+Session Management: Automatically retrieves required tokens.
+Prerequisites
+Python 3.8+
+Required libraries installed from requirements.txt
+Installation
+Clone the Repository
+
+bash
+Copy code
+git clone https://github.com/yourusername/pumpfun-autocomment-bot.git
+cd pumpfun-autocomment-bot
+Install Dependencies
+
+bash
+Copy code
+pip install -r requirements.txt
+Configure Environment
+Create a .env file in the project directory with the following variables:
+
+ini
+Copy code
+PROXY_HOST=your_proxy_host
+PROXY_PORT=your_proxy_port
+PROXY_USERNAME=your_proxy_username
+PROXY_PASSWORD=your_proxy_password
+CAPSOLVER_API_KEY=your_capsolver_api_key
+COMMENT_TEXT=Your comment text here
+COMMENT_DELAY=10
+Run the Bot
+Execute the script:
+
+bash
+Copy code
+python main.py
+Usage
+The script automates:
+
+Account creation
+CAPTCHA solving
+Comment submission on available coins
+Logs display real-time progress:
+
+Account creation success
+CAPTCHA status
+Comments posted with delays
+Output Example
+yaml
+Copy code
+=======================================
+    PumpFun AutoComment Bot - V1
+=======================================
+Developed by: https://github.com/yourusername
+Creating account...
+Account created successfully: test123@mail.tm
+Submitting comment for Mint ID: XYZ123
+CAPTCHA challenge detected. Solving...
+CAPTCHA Solved Successfully. Retrying request...
+Comment submitted successfully for Mint ID: XYZ123!
+SLEEPING: 10
+Notes
+Ensure valid proxy credentials and Capsolver API key are provided in the .env file.
+Use at your discretion; misuse or spamming is strongly discouraged.
+License
+MIT License
+
+Author
+AKRAM ELBAHAR
